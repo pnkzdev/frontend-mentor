@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   width:360px;
+   justify-content: center;
+   align-items: center;
+   background-color: hsl(0, 0%, 12%);
+   border-radius: 12px;
+   padding-block: 20px;
+  box-shadow:0 12px 30px rgba(0, 0, 0, 0.6);
+}
+.profile-pic{
+    width:100px;
+    height:100px;
+}
+.profile-pic img{
+    border-radius: 50%;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.details{
+    margin-block:16px;
+}
+.name,.bio{
+    color:hsl(0, 0%, 100%);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.address{
+    color:hsl(75, 94%, 57%);
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.social-links{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    gap: 16px;
+}
+.social-links a{
+    text-decoration: none;
+    background-color: hsl(0, 0%, 20%);
+    margin-bottom: 10px;
+    padding-block: 10px;
+    color: hsl(0, 0%, 100%);
+    border-radius:16px;
+    width:80%;
+    text-align: center;
+    font-weight: bold;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover{
+    background-color: hsl( 0,0%,30%);
+}
+@media(max-width:375px){
+    .card{
+        width:100%;
+        border-radius:0;
+    }
+}
