@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Figtree",sans-serif;
+}
+:root{
+    --primary-color:hsl(47,88%,63%);
+    --white:hsl(0,0%,100%);
+    --gray-500:hsl(0,0%,42%);
+    --gray-950:hsl(0,0%,7%);
+}
+
+.main{
+    width:100vw;
+    height:100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width:300px;
+   background-color: var(--white);
+   padding: 20px;
+   border:2px solid var(--gray-500);
+   border-radius: 16px;
+   box-shadow: 10px 10px 5px var(--gray-950);
+   transition:transform 0.2s ease
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-image{
+   width:100%;
+   margin-bottom: 10px;;
+}
+.card-image img{
+  width:100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem;
+    margin-bottom: 12px;
+}
+.header .tag{
+     background-color: var(--primary-color);
+     border-radius: 10px;
+     align-self: flex-start;
+     padding:4px 12px;
+     font-weight: bold;
+     font-size: 0.9rem
+}
+
+.details h3{
+  margin-bottom: 12px;
+  color:var(--gray-950);
+}
+
+.details p{
+    color:var(--gray-500);
+    margin-bottom: 10px;
+}
+.mentor{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.mentor img{
+    width:30px;
+}
+.mentor .name{
+   font-size: 0.9rem;
+   font-weight: bold;
+}
+
+@media (max-width:375px){
+    .card{
+        width:90%;
+        padding: 16px;;
+    }
+    .details h3{
+        font-size: 1rem;
+    }
+}
