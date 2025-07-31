@@ -87,7 +87,13 @@
         width:90%;
         padding: 16px;;
     }
+    .header .date{
+        font-size: 0.9rem;
+    }
     .details h3{
         font-size: 1rem;
+    }
+    .details p{
+        font-size: 0.9rem;
     }
 }
