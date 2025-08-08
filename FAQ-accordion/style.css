@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 100%, 100%);
+    --purple-100: hsl(275, 100%, 97%);
+    --purple-600: hsl(292, 16%, 49%);
+    --purple-800:hsl(290, 76%, 40%);
+    --purple-950: hsl(292, 42%, 14%);
+}
+
+body{
+   height: 100vh;
+  font-family: 'Work Sans',sans-serif;
+  background-color: var(--purple-100);
+  background-image: url('./assets/images/background-pattern-desktop.svg');
+  background-repeat: no-repeat; 
+  background-position: top center;
+  background-size:contain;
+}
+
+.main{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.faq-card{
+    width: 600px;
+    background-color: var(--White);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0px 4px 10px var(--purple-600);
+    margin-block:1.2rem;
+}
+
+.heading{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    font-size:1.4rem;
+    color:var(--purple-950);
+    margin-bottom:20px;
+}
+
+.heading img{
+    width:1.8rem;
+}
+
+.faq{
+  border-bottom: 2px solid var(--purple-100);
+  margin-bottom: 1rem;
+}
+.faq:last-child{
+    border-bottom: none;
+}
+.question-faq{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    color:var(--purple-950);
+    margin-bottom: 10px;
+}
+.question-faq:hover{
+    color: var(--purple-800);
+    cursor: pointer;
+}
+.answer-faq{
+    max-height: 0;
+    overflow: hidden;
+    color:var(--purple-600);
+    margin-bottom: 0px;
+    transition: 0.2s ease, margin 0.2s ease;
+}
+.answer-faq.show-answer{
+    max-height: 500px;
+    margin-bottom: 1.2rem;
+}
+
+.answer-faq p{
+    line-height:1.4rem;
+}
+
+
+@media (max-width:768px){
+    
+    .faq-card{
+        width:90%;
+        padding:1.5rem;
+    }
+    .heading{
+        font-size: 1.2rem;
+    }
+    .heading img{
+        width:1.4rem;
+
+    }
+}
+
+@media(max-width:480px){
+     body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
+}
