@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Results summary component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="summary-card">
+      <div class="result-score">
+        <p class="heading">Your Result</p>
+        <div class="score-wrapper">
+          <span class="score">76</span>
+          <span class="total">of 100</span>
+        </div>
+        <div class="description">
+          <h2>Great</h2>
+          <p>
+            You scored higher than 65% of the people who have taken
+            these tests.
+          </p>
+        </div>
+      </div>
+      <div class="summary-wrapper">
+        <h3>Summary</h3>
+        <div class="score-rows">
+          <div class="score-row reaction">
+            <div class="score-name">
+              <img src="./assets/images/icon-reaction.svg" alt="icon" />
+              <span class="text-reaction">Reaction</span>
+            </div>
+            <div class="score-accuracy">
+              <span class="bold">80</span>/100
+            </div>
+          </div>
+          <div class="score-row memory">
+            <div class="score-name">
+              <img src="./assets/images/icon-memory.svg" alt="icon" />
+              <span class="text-memory">Memory</span>
+            </div>
+            <div class="score-accuracy">
+              <span class="bold">92</span>/100
+            </div>
+          </div>
+          <div class="score-row verbal">
+            <div class="score-name">
+              <img src="./assets/images/icon-verbal.svg" alt="icon" />
+              <span class="text-verbal">Verbal</span>
+            </div>
+            <div class="score-accuracy">
+              <span class="bold">61</span>/100
+            </div>
+          </div>
+          <div class="score-row visual">
+            <div class="score-name">
+              <img src="./assets/images/icon-visual.svg" alt="icon" />
+              <span class="text-visual">Visual</span>
+            </div>
+            <div class="score-accuracy">
+              <span class="bold">73</span>/100
+            </div>
+          </div>
+        </div>
+        <button class="button">Continue</button>
+      </div>
+    </div>
+  </body>
+</html>
