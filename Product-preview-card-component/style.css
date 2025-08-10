@@ -114,7 +114,4 @@ background-repeat: no-repeat;
     background-image: url("./assets/images/image-product-mobile.jpg");
     min-height: 300px;
    }
-   .product-details{
-    flex:2;
-   }
 }
