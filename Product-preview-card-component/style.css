@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+/*--- Primary ---*/
+--Green-500:hsl(158, 36%, 37%);
+--Green-700: hsl(158, 42%, 18%);
+
+ /*--- Neutral --- */
+--Black: hsl(212, 21%, 14%);
+--Grey: hsl(228, 12%, 48%);
+--Cream: hsl(30, 38%, 92%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--Cream);
+    font-family: "Montserrat",sans-serif;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.product-preview-card{
+   width:500px;
+   display: flex;
+   border-radius: 16px;
+   background-color: var(--White);
+   overflow: hidden;
+}
+
+.product-image,.product-details{
+    flex:1;
+}
+.product-image {
+background-image: url("./assets/images/image-product-desktop.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.product-details{
+    padding: 1.6rem;
+}
+.product-name{
+   color:var(--Grey);
+   font-family: "Fraunces", sans-serif;
+   font-size: small;
+   letter-spacing: 2px;
+   margin-bottom: 14px;
+}
+
+.product-brand{
+    color:var(--Black);
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.product-description{
+    color:var(--Grey);
+    line-height:1.4;
+    margin-bottom: 10px;
+}
+
+.product-price{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-bottom:10px;
+}
+.product-price .discount{
+    color:var(--Green-500);
+    font-weight: bold;
+    font-family: "Fraunces", sans-serif;
+    font-size: larger;
+}
+
+.product-price .original{
+    color:var(--Grey);
+    font-size:smaller;
+    text-decoration:line-through;
+}
+
+.button{
+    color:var(--White);
+    background-color: var(--Green-500);
+    padding-block:10px;
+    border-radius: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.button img{
+    margin-right: 10px;
+}
+
+.button:hover{
+    background-color: var(--Green-700);
+}
+
+@media (max-width:600px){
+    .product-preview-card{
+        flex-direction: column;
+        width:90%;
+        margin: 10px;
+    }
+   .product-image{
+    background-image: url("./assets/images/image-product-mobile.jpg");
+    min-height: 300px;
+   }
+   .product-details{
+    flex:2;
+   }
+}
