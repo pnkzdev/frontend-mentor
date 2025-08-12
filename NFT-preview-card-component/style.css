@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+/* --- Primary Color --- */
+--Blue-500: hsl(215, 51%, 70%);
+--Cyan-400: hsl(178, 100%, 50%);
+
+/* --- Neutral --- */
+
+--Blue-950 : hsl(217, 54%, 11%); /*---main BG---*/
+--Blue-900: hsl(216, 50%, 16%) ;/*---card BG---*/
+--Blue-800: hsl(215, 32%, 27%); /*--- line---*/
+--White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit",sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--Blue-950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ntf-card{
+    background-color: var(--Blue-900);
+    width:300px;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.ntf-image {
+    position: relative;
+    height:300px;
+    width:100%;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.ntf-image>img{
+    width:100%;
+    height:100%;
+    border-radius: 8px;
+}
+
+.ntf-name{
+    color: var(--White);
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom:10px;
+}
+.ntf-description{
+    color:var(--Blue-500);
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+.ntf-value{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.value,.timer{
+   display: flex;
+   align-items: center;
+   gap:6px;
+   color: var(--Blue-500);
+}
+.value{
+    color: var(--Cyan-400);
+}
+
+.ntf-creator{
+    display: flex;
+    align-items: center;
+    gap:16px;
+    color:var(--Blue-500);
+    border-top: 2px solid var(--Blue-800);
+    padding-block: 14px;
+}
+.ntf-creator img{
+    height:30px;
+    width:30px;
+    border:1px solid var(--White);
+    border-radius: 50%;
+}
+
+.creator-name{
+    color:var(--White);
+}
+
+
+.overlay{
+
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    height:100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(178, 100%, 50%,0.5) ;
+
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.overlay img{
+   width:40px;
+   height: 40px;
+
+}
+.ntf-image:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.ntf-name:hover ,
+.creator-name:hover{
+    color:var(--Cyan-400);
+    cursor: pointer;
+}
+
+
+@media (max-width:375px){
+    .ntf-card{
+        width:90%;
+    }
+
+}
