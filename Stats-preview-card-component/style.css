@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  /*  ---Primary---  */
+  --Main-Bg: hsl(233, 47%, 7%);
+  --Card-Bg: hsl(244, 37%, 16%);
+  --Accent: hsl(277, 64%, 61%);
+
+  /* --- Neutral --- */
+
+  --Main-Heading: hsl(0, 0%, 100%);
+  --Main-Para: hsla(0, 0%, 100%, 0.75);
+  --Stat-Heading: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--Main-Bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats-preview-card {
+  background-color: var(--Card-Bg);
+  display: flex;
+  width: 800px;
+
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.stats-wrapper,
+.image-wrapper {
+  flex: 1;
+}
+
+.stats-wrapper {
+  padding: 2.2rem;
+}
+.stats-heading {
+  color: var(--Main-Heading);
+  letter-spacing: 0.6px;
+  margin-bottom: 1.8rem;
+}
+
+.stats-description {
+  color: var(--Main-Para);
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+.insights {
+  color: var(--Accent);
+}
+
+.stats-values {
+  display: flex;
+  justify-content: space-between;
+}
+.stats-row{
+    display: flex;
+    flex-direction: column;
+}
+.stats-number {
+  color: var(--Main-Heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.stats-label {
+  color: var(--Stat-Heading);
+  font-size: small;
+}
+
+.image-wrapper {
+  position: relative;
+  background: url("./assets/images/image-header-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--Accent);
+  opacity: 0.6;
+}
+
+@media (max-width:875px){
+   .stats-preview-card{
+    flex-direction: column-reverse;
+    height: 600px;
+    width:400px;
+    margin-block:1.2rem;
+   }
+   .image-wrapper{
+    background: url("./assets/images/image-header-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+}
+
+ 
+ @media (max-width:475px){
+   .stats-preview-card{
+     width:95%;
+     height: 95vh;
+    }
+      .stats-wrapper{
+      padding: 1.2rem;
+    }
+    .stats-heading{
+      font-size: 1.8rem;
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
+    }
+    .stats-description{
+      margin-bottom: 1.8rem;
+    }
+   .stats-values{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.2rem;
+   }
+   .stats-row{
+    text-align: center;
+   }
+}
