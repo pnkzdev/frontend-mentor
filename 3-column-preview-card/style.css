@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  /* --- Primary --- */
+
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+
+  /* --- Neutral --- */
+  --White: hsla(0, 0%, 100%, 0.75);
+  --Gray-100: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--White);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-wrapper {
+  width: 800px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  padding: 2rem;
+}
+.sedans {
+  background-color: var(--Gold-500);
+}
+.suvs {
+  background-color: var(--Cyan-800);
+}
+
+.luxury {
+  background-color: var(--Green-950);
+}
+.car-img {
+  margin-bottom: 1.2rem;
+}
+.car-name {
+  font-family: "Big Shoulders", sans-serif;
+  color: var(--White);
+  margin-bottom: 1.2rem;
+}
+
+.car-description {
+  color: var(--Gray-100);
+  line-height: 1.5;
+  margin-bottom: 2.8rem;
+}
+
+.learn-more-btn {
+  background-color: var(--White);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 16px;
+}
+
+.sedans .learn-more-btn {
+  color: var(--Gold-500);
+}
+
+.suvs .learn-more-btn {
+  color: var(--Cyan-800);
+}
+
+.luxury .learn-more-btn {
+  color: var(--Green-950);
+}
+
+.learn-more-btn:hover {
+  border: 1px solid var(--White);
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--White);
+}
+
+@media (max-width: 775px) {
+  .cards-wrapper {
+    flex-direction: column;
+    width:400px;
+    margin-block: 1.2rem;
+  }
+}
+
+@media(max-width:475px){
+   .cards-wrapper{
+    width:90%;
+   }
+  .sedans,
+  .suvs,
+  .luxury {
+    padding: 1.2rem;
+  } 
+}
+
