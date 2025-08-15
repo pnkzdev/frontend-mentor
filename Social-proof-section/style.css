@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --- Primary --- */
+  --Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* --- Neutral --- */
+  --Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.social-proof {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  padding:2.4rem;
+}
+
+.social-proof::after,
+.social-proof::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.social-proof:before {
+  background: url("./assets/images/bg-pattern-top-desktop.svg");
+  background-repeat: no-repeat;
+  top: -15%;
+  left: 0;
+}
+
+.social-proof::after {
+  background: url("./assets/images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  bottom: -15%;
+  right:0%;
+}
+
+
+.user-reviews{
+    display: flex;
+    gap:5px;
+}
+
+.review{
+     padding: 1.2rem;
+     background-color: var(--Dark-Magenta);
+}
+
+.review .user-profile{
+   display: flex;
+   align-items: center;
+}
+
+.user-profile>img{
+    width:75px;
+    width:75px;
+    border-radius: 50%;
+}
+.user-details{
+}
