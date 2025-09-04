@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* --Primary-- */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* --Neutral-- */
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--White);
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 100%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-block {
+  max-width: 520px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main-heading,
+.subheading {
+  font-size: 2.2rem;
+}
+.main-heading {
+  color: var(--Grey-500);
+  font-weight: 200;
+}
+.subheading {
+  color: var(--Grey-500);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.description {
+  color: var(--Grey-400);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.middle-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  min-height: 250px;
+  max-width: 350px;
+}
+.card-heading {
+  color: var(--Grey-500);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: var(--Grey-400);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.card-img {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.card-left {
+  border-top: 5px solid var(--Cyan);
+}
+
+.card-top {
+  border-top: 5px solid var(--Red);
+}
+
+.card-bottom {
+  border-top: 5px solid var(--Orange);
+}
+
+.card-right {
+  border-top: 5px solid var(--Blue);
+}
+
+@media (max-width: 1175px) {
+  .cards {
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
+  .middle-cards {
+    display: contents;
+  }
+  .card{
+    flex:1 1 350px;
+  }
+}
+@media (max-width: 480px) {
+  .main-heading,
+  .subheading {
+    font-size: 1.5rem;
+  }
+}
